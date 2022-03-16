@@ -27,6 +27,7 @@ class MyRecyclerViewAdapter(private val friends:List<Friend>,private val clickLi
 
 class MyViewHolder(val view : View) : RecyclerView.ViewHolder(view){
     val nameTextView = view.findViewById<TextView>(R.id.name_text_view)
+
     fun bind(friend: Friend,clickListener: (Friend) -> Unit){
         nameTextView.text = "Hello ${friend.name},${friend.age}"
         view.setOnClickListener {
